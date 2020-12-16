@@ -17,5 +17,5 @@
 
 - name: associate an elastic IP with an instance
   ec2_eip:
-    device_id: "{{ create_instance[0].id }}"
+    device_id: "{{ create_instance.instances[0].id }}"
     ip: 18.181.135.212
