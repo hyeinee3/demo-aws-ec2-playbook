@@ -16,6 +16,6 @@
   register: create_instance
 
 - name: associate an elastic IP with an instance
-  community.aws.ec2_eip:
+  ec2_eip:
     device_id: "{{ create_instance[0].id }}"
     ip: 18.181.135.212
