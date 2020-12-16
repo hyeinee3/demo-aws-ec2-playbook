@@ -2,7 +2,7 @@
 # tasks file for aws
 - name: Create EC2 Instance
   ec2:
-    key_name: "{{ key_name }}"
+    key_name: asgard-test-ec2-ssh-key
     image: "{{ image }}"
     instance_type: t2.micro
     region: "{{ aws_region }}"
