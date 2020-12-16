@@ -44,7 +44,7 @@
   ec2_key:
     name: "{{ vpc_key }}"
     region: "{{aws_region}}"
-  register : ec2_key
+  register: ec2_key
 
 - name: print EC2 key
   debug:
