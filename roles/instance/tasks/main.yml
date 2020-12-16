@@ -7,7 +7,7 @@
     instance_type: t2.micro
     region: "{{ region }}"
     vpc_subnet_id: "{{vpc_subnet_id}}"
-    group_id: "{{sec_group}}"
+    group_id: "{{ sec_group }}"
     assign_public_ip: yes
     instance_tags:
       Name: DevOS Test EC2 Instance

@@ -2,7 +2,7 @@
 # tasks file for aws
 - name: Create EC2 Instance
   ec2:
-    key_name: "{{ vpc_key }}"
+    key_name: "{{ key_name }}"
     image: "{{ image }}"
     instance_type: t2.micro
     region: "{{ aws_region }}"
@@ -13,3 +13,9 @@
       Name: DevOS Test EC2 Instance
     wait: true
     count: 1
+  register: create_instance
+
+- name: associate an elastic IP with an instance
+  community.aws.ec2_eip:
+    device_id: "{{ create_instance[0].id }}"
+    ip: 18.181.135.212
