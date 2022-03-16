@@ -21,6 +21,8 @@
           - device_name : /dev/xvda
             volume_type: gp2
             volume_size: 8
+        tag_key : "SWQA"
+        tag_value: "DevOps"
       register : created_ec2
 
     - name: Debug
