@@ -12,7 +12,7 @@
     instance_tags:
       Name: DevOS Test EC2 Instance
   tags :
-    Key : "SWQA"
-    Value: "DevOps"
+    key : "SWQA"
+    value: "DevOps"
     wait: true
     count: 1
